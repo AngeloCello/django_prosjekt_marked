@@ -9,12 +9,18 @@
 
     <title>
       {% block title %}
-
       {% endblock %}
     </title>
   </head>
 
   <body>
+  {% if messages %}
+    {% for message in messages %}
+      <div>
+        {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
   {% include 'main/includes/navbar.html' %}
   {% block pageheader %}
   {% endblock %}

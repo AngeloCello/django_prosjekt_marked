@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+{% block title %}
+    Login
+{% endblock %}
+{% block content %}
+<body class="text-center">
+    <form class="form-signin" method="POST">
+        {% csrf_token %}
+        <img class="mb-4" src="https://uploads-ssl.webflow.com/5d0778028518921b6c00dcff/5d4d5eb6e11fbe3fcf695d7f_logo_414040.svg"  alt="" width="500" height="200" style="width:100%; max-width:600px;">
+        <h1 class="h3 mb-3 font-weight-normal">
+            Please sign in
+        </h1>
+        <br>
+        <label for="inputUsername" class="sr-only">
+            User Name
+        </label>
+        <input type="text" id="inputUsername" class="form-control" placeholder="User Name" name="username" required autofocus>
+        <br>
+        <label for="inputPassword" class="sr-only">
+            Password
+        </label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
+        <br>
+        <div class="checkbox mb-3">
+            <h6>Dont Have an account? </h6>
+            <a class="btn btn-sm btn-secondary" href="{% url 'register' %}">Register</a>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+</body>
+{% endblock %}
