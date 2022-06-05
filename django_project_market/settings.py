@@ -133,3 +133,6 @@ STATICFILES_DIRS = (
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+
