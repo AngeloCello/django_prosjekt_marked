@@ -19,7 +19,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary"
-                data-dismiss="modal">Close
+                data-dismiss="modal">Lukk
         </button>
       </div>
     </div>
@@ -34,7 +34,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="ModalLabel">
-            Are you sure you want to buy {{ item.name }} ?
+            Er du sikker på at du vil kjøpe boligen på {{ item.name }} ?
         </h5>
         <button type="button" class="close"
                 data-dismiss="modal" aria-label="Close">
@@ -45,20 +45,20 @@
         <form method="POST">
             {% csrf_token %}
             <h4 class="text-center">
-                {{ item.name }} costs {{ item.price }} KR
+                Prisen er {{ item.price }} KR
             </h4>
             <br>
             <h6 class="text-center">
-                By clicking Purchase, you will buy this item from the market
+                Ved å klikke på Kjøp vil du kjøpe denne boligen fra markedet
             </h6>
             <br>
             <input type="hidden" name="purchased-item" value="{{ item.name }}">
-            <button type="submit" class="btn btn-outline-success btn-block">Purchase</button>
+            <button type="submit" class="btn btn-outline-success btn-block">Kjøp</button>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary"
-                data-dismiss="modal">Close
+                data-dismiss="modal">Lukk
         </button>
       </div>
     </div>
