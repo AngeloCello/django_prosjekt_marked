@@ -5,3 +5,4 @@ sqlparse==0.4.2
 tzdata==2022.1
 unicorn==1.0.3
 whitenoise==6.1.0
+python-decouple==3.6
